@@ -11,6 +11,8 @@ class Game {
     this.height = height;
     this.width = width;
     this.currPlayer = p1;
+    this.p1 = p1;
+    this.p2 = p2;
     this.makeBoard();
     this.makeHtmlBoard();
     this.gameOver = false;
@@ -99,7 +101,7 @@ class Game {
 
   handleClick(evt) {
 
-    this.currPlayer === this.players[0] ? document.querySelector("#game").style.borderColor = `${this.currPlayer.color}` : document.querySelector("#game").style.borderColor = `${this.currPlayer.color}`;
+    this.currPlayer === this.players[0] ? document.querySelector("#game").style.borderColor = `${this.p2.color}` : document.querySelector("#game").style.borderColor = `${this.p1.color}`;
 
     // get x from ID of clicked cell
     const x = +evt.target.id;
